@@ -1,18 +1,30 @@
 package com.example.musicTest;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.content.ComponentName;
+import android.content.Intent;
 import android.os.Bundle;
 import android.media.AudioManager;
 import android.media.MediaPlayer;//たぶんいらない
+import android.os.RemoteException;
 import android.support.v4.media.MediaBrowserCompat;
+import android.support.v4.media.MediaMetadataCompat;
 import android.support.v4.media.session.MediaControllerCompat;
+import android.support.v4.media.session.PlaybackStateCompat;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.content.res.AssetFileDescriptor;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.Toast;
 import java.io.IOException;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     TextView textView_duration;
     ImageButton button_prev;
     ImageButton button_next;
-    FloatingActionButton button_play;
+    ImageButton button_play;
     ImageView imageView;
     SeekBar seekBar;
 
